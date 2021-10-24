@@ -1,0 +1,7 @@
+void traver(TreeNode root){
+    //前序遍历
+    traver(root.left);
+    //中序遍历
+    traver(root.right);
+    //后序遍历
+}

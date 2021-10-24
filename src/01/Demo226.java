@@ -36,15 +36,16 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Demo226 {
+public class Demo226 {
     public TreeNode invertTree(TreeNode root) {
         if(root==null){
-            return null;
+            return root;
         }
-        TreeNode left = invertTree(root.left);
-        TreeNode right = invertTree(root.right);
-        root.right = left;
-        root.left = right;
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+        invertTree(root.left);
+        invertTree(root.right);
         return root;
     }
 

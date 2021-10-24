@@ -38,28 +38,17 @@ class Demo144 {
         return list;
     }
 
-    public void preorder(TreeNode root,List<Integer> list){
+
+    public void preorder(TreeNode root, List<Integer> result){
         if(root == null){
             return;
         }
-        list.add(root.val);
-        preorder(root.left,list);
-        preorder(root.right,list);
+        result.add(root.val);
+        preorder(root.left,result);
+        preorder(root.right,result);
     }
 
 
 
-//    public List<Integer> preorderTraversal(TreeNode root) {
-//        List<Integer> list = new ArrayList<>();
-//        p(root,list);
-//        return list;
-//    }
-//
-//    public void p(TreeNode curr,List<Integer> list){
-//        if(curr==null){ return; }
-//        list.add(curr.val);
-//        p(curr.left,list);
-//        p(curr.right,list);
-//    }
 }
 //leetcode submit region end(Prohibit modification and deletion)

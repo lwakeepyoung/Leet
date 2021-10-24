@@ -36,19 +36,21 @@ import java.util.List;
  *     }
  * }
  */
-class Demo145 {
+public class Demo145 {
     public List<Integer> postorderTraversal(TreeNode root) {
-        List<Integer> list = new ArrayList<>();
-        postorder(root,list);
-        return list;
+        List<Integer> result = new ArrayList<>();
+        postorder(root,result);
+        return result;
     }
 
-    private void postorder(TreeNode root,List<Integer> list){
-        if(root!=null){
-            postorder(root.left,list);
-            postorder(root.right,list);
-            list.add(root.val);
+    private void postorder(TreeNode root,List<Integer> result){
+        if(root==null){
+            return;
         }
+
+        postorder(root.left,result);
+        postorder(root.right,result);
+        result.add(root.val);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
