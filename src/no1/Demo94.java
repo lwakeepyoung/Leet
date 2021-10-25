@@ -17,17 +17,19 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+package no1;
+import common.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class common.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     common.TreeNode left;
+ *     common.TreeNode right;
+ *     common.TreeNode(int x) { val = x; }
  * }
  */
 public class Demo94 {

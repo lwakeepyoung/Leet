@@ -1,4 +1,4 @@
-//给定一个二叉树，返回它的 前序 遍历。
+package no1;//给定一个二叉树，返回它的 前序 遍历。
 //
 // 示例:
 //
@@ -19,15 +19,17 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
+import common.TreeNode;
+
 import java.util.*;
 
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class common.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     common.TreeNode left;
+ *     common.TreeNode right;
+ *     common.TreeNode(int x) { val = x; }
  * }
  */
 class Demo144 {

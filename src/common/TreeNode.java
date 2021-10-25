@@ -1,5 +1,7 @@
+package common;
+
 public class TreeNode {
-    int val;
+    public int val;
     public TreeNode left;
     public TreeNode right;
     public TreeNode(int val){

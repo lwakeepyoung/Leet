@@ -1,4 +1,4 @@
-void traver(TreeNode root){
+void traver(common.TreeNode root){
     //前序遍历
     traver(root.left);
     //中序遍历

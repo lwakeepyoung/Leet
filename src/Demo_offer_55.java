@@ -1,10 +1,12 @@
+import common.TreeNode;
+
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class common.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     common.TreeNode left;
+ *     common.TreeNode right;
+ *     common.TreeNode(int x) { val = x; }
  * }
  */
 class Demo_offer_55 {

@@ -1,4 +1,4 @@
-//翻转一棵二叉树。
+package no1;//翻转一棵二叉树。
 //
 // 示例：
 //
@@ -27,13 +27,16 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
+import common.TreeNode;
+
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class common.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     common.TreeNode left;
+ *     common.TreeNode right;
+ *     common.TreeNode(int x) { val = x; }
  * }
  */
 public class Demo226 {
