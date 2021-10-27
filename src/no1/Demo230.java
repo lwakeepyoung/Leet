@@ -13,7 +13,7 @@ public class Demo230 {
     public int kthSmallest(TreeNode root, int k) {
         num = new int[k];
         kth(root,k);
-        return num[index];
+        return num[k-1];
     }
 
     public void kth(TreeNode root,int k){
@@ -21,7 +21,7 @@ public class Demo230 {
             return;
         }
         kth(root.left,k);
-        if(num.length==k){
+        if(index>k-1){
             return;
         }
         num[index] = root.val;
