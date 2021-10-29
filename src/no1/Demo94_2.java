@@ -2,10 +2,7 @@ package no1;
 
 import common.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Author: lwa
@@ -14,13 +11,17 @@ import java.util.List;
 public class Demo94_2 {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        if(root==null){
-            return result;
+        Deque<TreeNode> deque = new ArrayDeque<>();
+        TreeNode curr = root;
+        while (curr!=null || !deque.isEmpty()){
+            while (curr!=null){
+                deque.push(curr);
+                curr = curr.left;
+            }
+            curr = deque.poll();
+            result.add(curr.val);
+            curr = curr.right;
         }
-        Deque<TreeNode> stack = new LinkedList<>();
-
-
-
         return result;
     }
 

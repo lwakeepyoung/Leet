@@ -4,7 +4,7 @@ import common.TreeNode;
 
 public class Demo501 {
     public int[] findMode(TreeNode root) {
-
+        return null;
     }
 
 
