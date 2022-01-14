@@ -2,17 +2,15 @@ package listnode;
 
 import common.ListNode;
 
-import java.util.List;
-
-public class Demo2 {
+public class Demo2_2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode pre = new ListNode(-1);
         ListNode p1 = l1;
         ListNode p2 = l2;
         ListNode p = pre;
-        //进位
         int carry = 0;
         while (p1!=null || p2!=null || carry>0){
+            //加上进位
             int value = carry;
             if(p1!=null){
                 value+=p1.val;
@@ -22,10 +20,10 @@ public class Demo2 {
                 value+=p2.val;
                 p2 = p2.next;
             }
-            //处理进位
+            //处理进情况
             carry = value/10;
             value = value%10;
-            //构建新节点
+            //构建想加后的节点
             p.next = new ListNode(value);
             p = p.next;
         }
