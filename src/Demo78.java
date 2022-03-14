@@ -20,12 +20,30 @@
 // 👍 749 👎 0
 
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Demo78 {
+
+    private List<List<Integer>> res =new LinkedList<>();
+
+    private LinkedList<Integer> track = new LinkedList<>();
+
     public List<List<Integer>> subsets(int[] nums) {
-        return null;
+        backTrack(nums,0);
+        return res;
+    }
+
+    public void backTrack(int[] nums, int start){
+        //加入结果
+        res.add(new LinkedList<>(track));
+        for (int i = start; i < nums.length; i++) {
+            track.addLast(nums[i]);
+            backTrack(nums,i+1);
+            track.removeLast();
+        }
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
