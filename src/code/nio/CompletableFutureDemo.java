@@ -32,17 +32,16 @@ public class CompletableFutureDemo {
     }
 
     public static void testCount() throws ExecutionException, InterruptedException {
-        CompletableFuture<Integer> completableFuture = CompletableFuture.supplyAsync(() -> BackendA.getCount());
-        completableFuture.thenAcceptAsync(a->{
+        CompletableFuture<Integer> f1 = CompletableFuture.supplyAsync(() -> BackendA.getCount());
+        CompletableFuture<Integer> f2 = f1.thenApplyAsync((a)->{
             Integer b = BackendB.getCount();
-            Integer result = a + b;
-            System.out.println(result);
+            return a+b;
         });
-
+        System.out.println(f2.get());
         Thread.sleep(2000);
-        //System.out.println(completableFuture.get());
-
     }
+
+
 
 
     public static void test1(){
