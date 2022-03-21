@@ -88,7 +88,8 @@ public class CompletableFutureDemo {
     }
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        testCount();
+        //testCount();
+
 //        List<Integer> a = new ArrayList();
 //        a.add(1);
 //        List<Integer> b = new ArrayList<>();
