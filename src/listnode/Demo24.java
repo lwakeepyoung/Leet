@@ -16,6 +16,6 @@ public class Demo24 {
             pre= curr;
             curr = temp;
         }
-        return head;
+        return pre;
     }
 }
